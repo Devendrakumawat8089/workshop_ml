@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <title>Dev Clinic AI</title>
+    <link rel="stylesheet" href="/static/chatbot.css">
+</head>
+<body>
+<div class="app">
+    <aside class="sidebar" id="sidebar">
+        <div class="brand"><div class="brand-icon">✚</div><span>Dev Clinic AI</span></div>
+        <button class="new-chat" id="newChatBtn"><span>＋</span> New chat</button>
+        <div class="sidebar-label">ASSISTANT</div>
+        <div class="sidebar-item active">✧ &nbsp; Clinic AI Assistant</div>
+        <div class="sidebar-bottom">
+            <div class="profile-icon">D</div>
+            <div><strong>Dev Clinic</strong><small>AI assistant</small></div>
+        </div>
+    </aside>
+
+    <main class="main">
+        <header class="topbar">
+            <button class="menu-btn" id="menuBtn" aria-label="Toggle sidebar">☰</button>
+            <div class="mobile-brand">Dev Clinic AI</div>
+            <div class="model-label"><span class="status-dot"></span> AI Assistant</div>
+        </header>
+
+        <section class="chat-area" id="chatArea">
+            <div class="welcome" id="welcome">
+                <div class="welcome-icon">✚</div>
+                <h1>How can I help you today?</h1>
+                <p>Ask about clinic doctors, schedules, and available clinic records.</p>
+                <div class="suggestions">
+                    <button class="suggestion" data-message="Who is Dr. Mehta?">
+                        <span>👨‍⚕️</span><strong>Doctor information</strong><small>Who is Dr. Mehta?</small>
+                    </button>
+                    <button class="suggestion" data-message="What are Dr. Sharma's timings?">
+                        <span>🕒</span><strong>Doctor schedules</strong><small>Check clinic timings</small>
+                    </button>
+                    <button class="suggestion" data-message="Tell me what clinic information you can look up.">
+                        <span>🏥</span><strong>Clinic information</strong><small>Explore available information</small>
+                    </button>
+                </div>
+            </div>
+            <div class="messages" id="messages" aria-live="polite"></div>
+        </section>
+
+        <footer class="composer-area">
+            <form class="composer" id="chatForm">
+                <textarea id="messageInput" rows="1" placeholder="Message Dev Clinic AI..."
+                          aria-label="Type your message" required></textarea>
+                <button type="submit" id="sendBtn" aria-label="Send message">
+                    <svg viewBox="0 0 24 24"><path d="M22 2 11 13"></path><path d="m22 2-7 20-4-9-9-4Z"></path></svg>
+                </button>
+            </form>
+            <p class="disclaimer">AI responses may be inaccurate. Consult a qualified healthcare professional for medical advice.</p>
+        </footer>
+    </main>
+</div>
+<script src="/static/chatbot.js"></script>
+</body>
+</html>
